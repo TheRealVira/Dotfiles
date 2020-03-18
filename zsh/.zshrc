@@ -21,7 +21,7 @@ plugins=(
 )
 
 wal -q -a 90 -i '/home/jr/Pictures/Wallpapers/'
-neofetch
+neofetch ~/.config/neofetch/config
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
