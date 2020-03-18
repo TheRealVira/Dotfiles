@@ -205,5 +205,5 @@ bindsym Mod1+l exec "i3lock-fancy"
 ########################################################################
 
 exec_always --no-startup-id ~/.config/compton/launchCompton.sh
-exec_always --no-startup-id feh -q --bg-fill ~/Pictures/Wallpapers/
+exec_always --no-startup-id feh -q --bg-fill ~/.config/i3/wallpaper/
 exec_always --no-startup-id ~/.config/polybar/launchPoly.sh
