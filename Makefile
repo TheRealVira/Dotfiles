@@ -6,5 +6,3 @@ uninstall:
 
 update:
 	git pull
-	stow -D . --target "$${HOME}/.config/"
-	stow . --target "$${HOME}/.config/"
