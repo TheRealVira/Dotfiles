@@ -17,5 +17,5 @@ then
 		rm "$WALLPAPER_DIR/wallpaper.jpg"
 	fi
 else
-	rm "$WALLPAPER_DIR/wallpaper-new.jpg"
+	mv -f "$WALLPAPER_DIR/wallpaper-new.jpg" "$WALLPAPER_DIR/wallpaper.jpg"
 fi
