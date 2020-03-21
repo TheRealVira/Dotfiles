@@ -1,12 +1,9 @@
 #!/bin/bash
 
-WEBPAGE="https://apod.nasa.gov/apod/"
+WEBPAGE="https://apod.nasa.gov"
 WALLPAPER_DIR=~/.config/i3/wallpaper
+mkdir -p "$WALLPAPER_DIR"
 
-wget "${WEBPAGE}" --quiet -O temp.html
-
-grep -m 1 jpg "temp.html" | grep -o '".*"' | sed 's/"//g' | awk -v var="${WEBPAGE}" '{print var$1}' | xargs wget --quiet -O wallpaper.jpg
-
-rm -rf "${WALLPAPER_DIR}"
-mkdir "${WALLPAPER_DIR}"
-cp wallpaper.jpg "${WALLPAPER_DIR}"
+curl -s "$WEBPAGE/apod/" | \
+	perl -ne 'print $1 if m|<a href="(image/[^"]+)"|' | \
+	wget -B "$WEBPAGE" -q -i - -O "$WALLPAPER_DIR/wallpaper.jpg"
