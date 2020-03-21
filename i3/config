@@ -186,6 +186,12 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
+# statusbar
+bar {
+	position top
+	status_command i3blocks -c ~/.config/i3blocks/config
+}
+
 # i3-gaps
 gaps inner 10
 gaps outer 0
@@ -208,4 +214,3 @@ exec_always --no-startup-id ~/.config/compton/launchCompton.sh
 exec_always --no-startup-id ~/.config/wallpaper/fetchUpdate.sh
 exec_always --no-startup-id feh -q --bg-fill ~/.config/i3/wallpaper/
 exec_always --no-startup-id wal -q -a 90 -i ~/.config/i3/wallpaper
-exec_always --no-startup-id ~/.config/polybar/launchPoly.sh
