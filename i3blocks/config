@@ -37,9 +37,7 @@ color=#A4C2F4
 
 # Local time
 [time]
-instance=la
-TZ=Europe/Austria
-command=date +%T
+command=date "+%a, %b %_d %Y, %T"
 interval=5
 
 # Restart i3 on click
