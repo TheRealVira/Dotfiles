@@ -10,7 +10,7 @@ IMAGE=$(curl -s "$WEBPAGE/astropix.html" | perl -ne 'print $1 if m|<a href="(ima
 if wget -b "$WEBPAGE/$IMAGE" -O "$WALLPAPER_DIR/wallpaper-new.jpg" || ! -f "$WALLPAPER_DIR/wallpaper.jpg" || md5sum "$WALLPAPER_DIR/wallpaper.jpg" -eq md5sum "$WALLPAPER_DIR/wallpaper-new.jpg"
 then
 	mv -f "$WALLPAPER_DIR/wallpaper-new.jpg" "$WALLPAPER_DIR/wallpaper.jpg"
-	feh -q --bg-fill ~/.config/i3/wallpaper/wallpaper.jpg
+	wal -c -q -r -i "$WALLPAPER_DIR/wallpaper.jpg"
 	exit 1
 else
 	rm "$WALLPAPER_DIR/wallpaper-new.jpg"
