@@ -20,7 +20,8 @@ plugins=(
   ruby
 )
 
-wal -q -t -r -a 90 -i ~/.config/i3/wallpaper/wallpaper.jpg
+wal -c
+wal -t -a 90 -i ~/.config/i3/wallpaper/wallpaper.jpg
 neofetch ~/.config/neofetch/config
 
 # Set list of themes to pick from when loading at random
