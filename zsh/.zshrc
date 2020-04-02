@@ -21,7 +21,7 @@ plugins=(
 )
 
 wal -c
-wal -t -a 90 -i ~/.config/i3/wallpaper/wallpaper.jpg
+wal -t -q -a 90 -i ~/.config/i3/wallpaper/wallpaper.jpg
 neofetch ~/.config/neofetch/config
 
 # Set list of themes to pick from when loading at random
