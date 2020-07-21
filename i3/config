@@ -187,10 +187,10 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 
 # statusbar
-bar {
-	position top
-	status_command i3blocks -c ~/.config/i3blocks/config
-}
+#bar {
+#	position top
+#	status_command i3blocks -c ~/.config/i3blocks/config
+#}
 
 # i3-gaps
 gaps inner 10
@@ -210,5 +210,6 @@ bindsym Mod1+l exec "i3lock-fancy"
 # Please remove the following exec line:
 ########################################################################
 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.config/compton/launchCompton.sh
 exec_always --no-startup-id ~/.config/wallpaper/fetchUpdate.sh
