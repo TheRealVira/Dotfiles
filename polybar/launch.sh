@@ -3,7 +3,7 @@
 # Terminate already running bar instances
 killall -q polybar
 
-polybar top
-polybar bottom
+polybar top &
+polybar bottom &
 
 echo "Bars launched..."
