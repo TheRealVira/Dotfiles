@@ -25,7 +25,7 @@ font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
-modules-left = powermenu
+modules-left = powermenu refresh
 modules-right = pulseaudio wired-network
 modules-center = date
 
@@ -102,49 +102,41 @@ date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 [module/memory]
 type = internal/memory
-format = <label> <bar-used>
-label = RAM
 
-bar-used-width = 30
+format = <label> <bar-used>
+label = RAM %percentage_used%%
+
+; Only applies if <bar-used> is used
+bar-used-indicator =
+bar-used-width = 50
+bar-used-fill = ▐
+bar-used-empty = ▐
+; Only applies if <ramp-used> is used
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+; Only applies if <ramp-free> is used
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
 bar-used-foreground-0 = ${colors.primary}
 bar-used-foreground-1 = ${colors.primary}
 bar-used-foreground-2 = ${colors.secondary}
 bar-used-foreground-3 = ${colors.alert}
-bar-used-indicator = |
-bar-used-indicator-font = 6
 bar-used-indicator-foreground = ${colors.foreground}
-bar-used-fill = ─
-bar-used-fill-font = 6
-bar-used-empty = ─
-bar-used-empty-font = 6
 bar-used-empty-foreground = ${colors.foreground-alt}
-
-[module/mpd]
-type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
-
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-random = 
-icon-repeat = 
-
-toggle-on-foreground =
-toggle-off-foreground = ${colors.foreground}
-
-bar-progress-width = 45
-bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
-bar-progress-indicator = |
-bar-progress-indicator-foreground = ${colors.foreground}
-bar-progress-indicator-font = 3
-bar-progress-fill = ─
-bar-progress-fill-foreground = ${colors.foreground}
-bar-progress-fill-font = 3
-bar-progress-empty = ─
-bar-progress-empty-font = 3
-bar-progress-empty-foreground = ${colors.foreground-alt}
 
 [module/wired-network]
 type = internal/network
@@ -229,6 +221,15 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/refresh]
+type = custom/text
+
+content-foregournd = ${colors.foreground}
+content-background = ${colors.background}
+content = 
+
+click-left = i3-msg restart
 
 [module/clock]
 type = internal/date
