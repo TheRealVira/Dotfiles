@@ -7,8 +7,10 @@ shadow-radius = 7;
 shadow-offset-x = -7;
 shadow-offset-y = -7;
 shadow-exclude = [
-	"name *= 'compton'",
+	"class_g = 'compton'",
 	"class_g = 'polybar'",
+	"class_g = 'maim'",
+	"class_g = 'Conky'",
 	"_GTK_FRAME_EXTENTS@:c"
 ];
 
@@ -37,7 +39,18 @@ opacity-rule = [
 	"90:class_g *= 'tabbed'",
 	"90:class_g *= 'kitty'",
 	"100:class_g *= 'telegram-desktop'",
-	"100:class_g *= 'firefox'"
+	"100:class_g *= 'firefox'",
+	"100:class_g *= 'maim'"
+];
+
+blur-background-exclude = [
+	"class_g = 'compton'",
+	"class_g = 'slop'",
+	"class_g = 'polybar'",
+	"class_g = 'Conky'",
+	"window_type = 'dock'",
+	"window_type = 'desktop'",
+	"_GTK_FRAME_EXTENTS@:c"
 ];
 
 # Fading
