@@ -237,7 +237,7 @@ content-background = ${colors.background}
 content = 
 format-padding = 3
 
-click-left = nautilus
+click-left = thunar
 
 [module/clock]
 type = internal/date
