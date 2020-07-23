@@ -247,7 +247,7 @@ content-background = ${colors.background}
 content = 
 format-padding = 3
 
-click-left = maim -s 
+click-left = maim -s | xclip -selection clipboard -t image/png  
 
 [module/clock]
 type = internal/date
