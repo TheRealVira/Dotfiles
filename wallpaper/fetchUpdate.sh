@@ -10,4 +10,4 @@ wget -q "$WEBPAGE/$IMAGE" -O "$WALLPAPER_DIR/wallpaper.jpg"
 
 wal --vte -q -i "$WALLPAPER_DIR/wallpaper.jpg"
 wal_steam -w
-
+xrdb -merge ~/.cache/wal/colors.Xresources
