@@ -8,6 +8,7 @@ IMAGE=$(curl -s "$WEBPAGE/astropix.html" | perl -ne 'print $1 if m|<a href="(ima
 
 wget -q "$WEBPAGE/$IMAGE" -O "$WALLPAPER_DIR/wallpaper.jpg"
 
-wal --vte -q -i "$WALLPAPER_DIR/wallpaper.jpg"
+wal -c
+wal -q -i "$WALLPAPER_DIR/wallpaper.jpg"
 wal_steam -w
 xrdb -merge ~/.cache/wal/colors.Xresources
