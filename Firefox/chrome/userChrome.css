@@ -1,0 +1,68 @@
+@import url('file:///home/jr/.cache/wal/colors.css');
+
+#navigator-toolbox {
+	background-color: var(--background) !important;
+	color: var(--foregournd) !important;
+}
+
+panel richlistbox,
+panel tree,
+panel button,
+panel menulist,
+panel textbox,
+panel input,
+menupopup,
+menu,
+menuitem{ -moz-appearance: none !important; }
+
+menulist,
+menuitem,
+menu{ min-height: 1.8em }
+
+panel menulist{ border: 1px solid transparent }
+
+panel richlistbox,
+panel tree,
+panel button,
+panel menulist,
+panel textbox,
+panel input,
+panel #searchbar,
+menupopup:not(#BMB_bookmarksPopup),
+#main-menubar > menu > menupopup,
+#context-navigation{
+  color: var(--uc-menu-color) !important;
+  padding: 2px;
+  background-color: var(--background) !important;
+  border-color: var(--color1) !important;
+}
+
+panel textbox input{ padding: 2px !important; }
+
+panel input{ border-width: 1px; border-style: solid; background-color: var(--background) !important; }
+panel #searchbar{ background-color: var(--background) !important; padding: 0 !important; }
+panel #searchbar input{ background-color: transparent !important; }
+
+panel menulist:hover,
+panel menulist[open]{ border-color: Highlight !important; }
+
+#editBMPanel_folderMenuList > menupopup > menuitem{ color: var(--color2) !important; }
+
+panel treechildren::-moz-tree-row(selected),
+panel button:hover,
+menu:hover,
+menu[_moz-menuactive],
+menu[open],
+menuitem:hover,
+menuitem[_moz-menuactive]{ background-color: var(--color2) !important; color: inherit !important; }
+
+menu[disabled="true"],
+menuitem[disabled="true"]{ color: var(--color1) !important; }
+
+menu:not(.subviewbutton) > .menu-right{ filter: invert(1) }
+
+#statuspanel-label:-moz-lwtheme-brighttext{
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  border-color: var(--color1) !important;
+}
