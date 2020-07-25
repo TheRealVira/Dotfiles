@@ -34,18 +34,18 @@ background-exclude = [
 	"_GTK_FRAME_EXTENTS@:c"
 ];
 opacity-rule = [ 
-	"90:class_g *= 'URxvt'",
-	"90:class_g *= 'st-256color'",
-	"90:class_g *= 'tabbed'",
-	"90:class_g *= 'kitty'",
-	"100:class_g *= 'telegram-desktop'",
-	"100:class_g *= 'firefox'",
-	"100:class_g *= 'maim'"
+	"90:name *= 'URxvt'",
+	"90:name *= 'st-256color'",
+	"90:name *= 'tabbed'"
+];
+
+focus-exclude = [
+	"class_g = 'firefox'",
+	"class_g = 'telegra-desktop'"
 ];
 
 blur-background-exclude = [
 	"class_g = 'compton'",
-	"class_g = 'slop'",
 	"class_g = 'polybar'",
 	"class_g = 'Conky'",
 	"window_type = 'dock'",
